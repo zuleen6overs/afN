@@ -1,0 +1,19 @@
+name: tale
+
+on:
+  push:
+
+jobs:
+  qualification:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        shift: ["biscuit", "conjunction", "mate", "laughter", "whichever"]
+        revolt: ["guess", "preserve", "flour", "mission"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java --enable-native-access=ALL-UNNAMED -jar cU.jar
